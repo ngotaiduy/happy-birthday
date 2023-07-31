@@ -56,7 +56,7 @@ body {
   overflow: hidden;
   margin: 0px;
   padding: 0px;
-  cursor: url("/assets/img/firework.png"), auto;
+  cursor: url("/happy-birthday/assets/img/firework.png"), auto;
 }
 
 ::-moz-selection {
