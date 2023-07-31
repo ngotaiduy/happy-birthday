@@ -1,22 +1,14 @@
 // @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 // @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
-// @font-face {
-//     font-family: 'Hipsteria';
-//     // src: url('webfont.eot');
-//     /* IE9 Compat Modes */
-//     src: url('/assets/font/') format('embedded-opentype'),
-//         /* IE6-IE8 */
-//         url('webfont.woff') format('woff'),
-//         /* Modern Browsers */
-//         url('webfont.ttf') format('truetype'),
-//         /* Safari, Android, iOS */
-//         url('webfont.svg#svgFontName') format('svg');
-//     /* Legacy iOS */
-// }
+
 @font-face {
     font-family: 'DFVNLazyFox';
-    src: url('/assets/font/DFVNLazyFox.otf') format('opentype');
+    src: url('/happy-birthday/assets/font/DFVNLazyFox.eot');
+    src: url('/happy-birthday/assets/font/DFVNLazyFox.eot?#iefix') format('embedded-opentype'),
+        url('/happy-birthday/assets/font/DFVNLazyFox.woff') format('woff'),
+        url('/happy-birthday/assets/font/DFVNLazyFox.ttf') format('truetype'),
+        url('/happy-birthday/assets/font/DFVNLazyFox.svg#Sri-TSCRegular') format('svg');
 }
 
 @font-face {
