@@ -28,7 +28,7 @@ h1.hb-title {
     animation: floatText 4s ease-in-out infinite;
     font-family: "GrapeNuts-Regular";
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -36,6 +36,7 @@ h1.hb-title {
 
     @media screen and (max-width: 767px) {
         font-size: 20px;
+        top: 20%;
     }
 }
 
