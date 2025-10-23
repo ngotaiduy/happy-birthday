@@ -170,3 +170,57 @@ window.addEventListener("resize", setCanvasSize);
     t.preventDefault(), (mousedown = !1);
   }),
   (window.onload = loop);
+
+(function () {
+  function ready(fn) {
+    if (document.readyState !== "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
+  }
+
+  ready(function () {
+    var card = document.querySelector(".card");
+    if (!card) return;
+
+    var isOpen = false;
+
+    function openCard() {
+      card.classList.add("card--open");
+      card.setAttribute("aria-expanded", "true");
+      isOpen = true;
+    }
+    function closeCard() {
+      card.classList.remove("card--open");
+      card.setAttribute("aria-expanded", "false");
+      isOpen = false;
+    }
+    function toggleCard() {
+      isOpen ? closeCard() : openCard();
+    }
+
+    card.addEventListener(
+      "pointerup",
+      function (e) {
+        if (e.pointerType === "mouse") return;
+        toggleCard();
+      },
+      { passive: true }
+    );
+
+    document.addEventListener(
+      "pointerdown",
+      function (e) {
+        if (!card.contains(e.target)) {
+          closeCard();
+        }
+      },
+      { passive: true }
+    );
+
+    card.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggleCard();
+      }
+    });
+  });
+})();

@@ -101,7 +101,10 @@ h4 {
         inset 300px 0 50px rgba(0, 0, 0, 0.5),
         20px 0 60px rgba(0, 0, 0, 0.5);
     transition: 1s;
-
+    cursor: pointer;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    will-change: transform;
     @media screen and (max-width: 767px) {
         top: 58%;
     }
@@ -164,7 +167,7 @@ h4 {
             transition: 0.6s;
         }
     }
-
+    &.card--open,
     &:hover {
         transform: translate(-50%, -50%) perspective(2000px) rotate(15deg) scale(1.2);
         box-shadow:
