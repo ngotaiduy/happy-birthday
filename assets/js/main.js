@@ -224,3 +224,25 @@ window.addEventListener("resize", setCanvasSize);
     });
   });
 })();
+
+(function () {
+  function initMusic() {
+    const audio = document.getElementById("bg-music");
+    if (!audio) return;
+
+    const startMusic = () => {
+      audio.play().catch((err) => {
+        console.log("Autoplay blocked:", err);
+      });
+      document.removeEventListener("pointerdown", startMusic);
+      document.removeEventListener("touchstart", startMusic);
+    };
+
+    document.addEventListener("pointerdown", startMusic, { passive: true });
+    document.addEventListener("touchstart", startMusic, { passive: true });
+  }
+
+  // Gọi khi DOM sẵn sàng
+  if (document.readyState !== "loading") initMusic();
+  else document.addEventListener("DOMContentLoaded", initMusic);
+})();
